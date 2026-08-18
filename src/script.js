@@ -35,19 +35,20 @@ $(function(){//ページ読み込み時
       $(".n-container").fadeOut();
     }
   });
+  $('#h-hamburger').click(function(){//ハンバーガーメニュークリック時
+    $('.h-menubox').fadeIn();
+    $('html').css('overflow-y','hidden');
+    $('#h-closer').fadeIn();
+    $('#main').css('filter','blur(5px)');
+  })
+  $('#h-closer').click(function(){//クローズクリック時
+    $('.h-menubox').fadeOut();
+    $('html').css('overflow-y','auto');
+    $('#h-closer').fadeOut();
+    $('#main').css('filter','blur(0px)');
+  })
 });
 
 
-$('#h-hamburger').click(function(){//ハンバーガーメニュークリック時
-  $('.h-menubox').fadeIn();
-  $('html').css('overflow-y','hidden');
-  $('#h-closer').fadeIn();
-  $('main').css('filter','blur(5px)');
-})
-$('#h-closer').click(function(){//クローズクリック時
-  $('.h-menubox').fadeOut();
-  $('html').css('overflow-y','auto');
-  $('#h-closer').fadeOut();
-  $('main').css('filter','blur(0px)');
-})
+
 

@@ -1,16 +1,21 @@
-# React + Vite
+# 上手いことバンドルされたよ！
+vercel：https://vite-study-green.vercel.app
+## 概要
+- npm create viteからviteプロジェクトを作った
+- フレームワークはreactで、javascript+コンパイラを選択
+- ライブラリの追加はすべてpnpmでやった
+- ライブラリの導入方法は各ライブラリによって違うから、利用方法を調べる必要がある。
+  （基本はimport "ライブラリ名"でいけそうだけどね）
+## 出来たこと・分かったこと
+- 画像とかも全部持っていってデプロイ
+- npm経由でライブラリ(jQueryとslick)をインストール
+- 僕が求めていたのはslickではなくslick-carouselだった。ライブラリ名とnpmでインストールするときの名前が違うこともある
+- slickはもう古いライブラリらしく、jQueryのバージョンを3.x系に落とさないと動かない。
+- リモートレポジトリ作る→cloneする→createのほうがやりやすいかも
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 出来なかったこと・分からなかったこと
+- importの使い勝手がいまいちよくわからんなあ。
+- script.jsってどこに置けばええんや？
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 今後の展望
+- いよいよnext.jsを使うぞい
