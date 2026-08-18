@@ -47,7 +47,27 @@ $(function(){//ページ読み込み時
     $('#h-closer').fadeOut();
     $('#main').css('filter','blur(0px)');
   })
+  // ブレイクポイントを設定
+  const mediaQuery = window.matchMedia('(min-width: 768px)');
+
+  // 関数を定義
+  function checkWindow(windowSize) {
+      // ウィンドウサイズが768px以上か
+      if (windowSize.matches) {
+        $('.h-menubox').css('display','block');
+      }else{
+        $('.h-menubox').css('display','none');
+      }
+  }
+
+  // ロード時に判定
+  checkWindow(mediaQuery);
+
+  // ブレイクポイントが切り替わったら判定
+  mediaQuery.addEventListener('change', checkWindow);
 });
+
+
 
 
 
