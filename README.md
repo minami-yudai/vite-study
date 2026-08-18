@@ -11,6 +11,7 @@ vercel：https://vite-study-green.vercel.app
 - npm経由でライブラリ(jQueryとslick)をインストール
 - 僕が求めていたのはslickではなくslick-carouselだった。ライブラリ名とnpmでインストールするときの名前が違うこともある
 - slickはもう古いライブラリらしく、jQueryのバージョンを3.x系に落とさないと動かない。
+- リモートレポジトリ作る→cloneする→createのほうがやりやすいかも
 
 ## 出来なかったこと・分からなかったこと
 - importの使い勝手がいまいちよくわからんなあ。
