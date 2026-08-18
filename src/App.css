@@ -1,0 +1,358 @@
+@import "slick-carousel/slick/slick.css";
+
+body{
+    margin:0;
+}
+html{
+    overflow-x:hidden;
+}
+/*h.ヘッダー関係*/
+#h-logo{
+    display:block;
+    margin:5px auto;
+    height:100px;
+}
+#h-hamburger{
+    display:none;
+    position:absolute;
+    right:0;
+    width:40px;
+    z-index:100;
+}
+#h-hamburgerimage{
+    width:40px;
+}
+#h-closer{
+    display:none;
+    font-size:40px;
+    position:absolute;
+    left:0;
+    width:40px;
+}
+.h-menucontainer{
+    display:block;
+    width:80%;
+    margin:auto;
+}
+.h-menubox{
+    display:block;
+    background-color:#25276d;
+    width:100%;
+}
+.h-menu{
+    display: grid;
+    grid-template-rows: 25px 25px;
+    grid-template-columns:repeat(4,1fr);
+    /*grid-template-columns: calc(25% - 1.5px) calc(25% - 1.5px) calc(25% - 1.5px) calc(25% - 1.5px);*/
+    gap: 2px;
+    text-align:center;
+    line-height:25px;
+    color:white;
+    font-size:small;
+    background-color:gray;
+    border: 2px gray solid;
+}
+.h-menu div{
+    background-color:#25276d;
+}
+
+/*[質問]どうしてidを全部指定しなくても、自動で流れ込んだのか？？*/
+
+#h-m6{
+    background-color:#d4ab04;/*#a08423;*/
+}
+#h-m7{
+    background-color:#91ae1c;/*#718634*/
+}
+#h-m8{
+    background-color:#be4141;/*#90394e*/
+}
+#main{
+    height:500px;
+}
+
+
+:root {
+  --scale: 1.2;
+}
+/*p.スライドショー*/
+.p-container{
+    height:calc(270px * var(--scale) + 50px);
+    position:relative;
+}
+.p-container img{
+    display:block;
+    height:calc(270px * var(--scale));
+    margin:auto;
+    z-index:0;
+}
+.p-fade{
+    background-color:black;
+    opacity: 70%;
+    width: calc((100% - 405px * var(--scale)) / 2);
+    height:calc(270px * var(--scale));
+    position:absolute;
+    top:0px;
+    z-index:1;
+}
+.p-fadeleft{
+    left:0px
+}
+.p-faderight{
+    right:0px
+}
+.slick{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    position:absolute;
+    top:0px;
+    width:50px;
+    height:calc(270px * var(--scale));
+    z-index:2;
+    border:none;
+    color:#ffffff;
+}
+.slick-arrow p{
+    height:30px;
+}
+.slick-prev{
+    right: calc(50% + 405px * var(--scale) / 2)
+}
+.slick-next{
+    left: calc(50% + 405px * var(--scale) / 2)
+}
+.slick-track{
+    height:calc(270px * var(--scale));
+    width:100vw;
+}
+
+
+/*a.アドミッションポリシー*/
+.a-container{
+    background-color:#eceeff;
+    height:fit-content;
+    padding: 20px 0px;
+}
+
+.a-menubox{
+    margin:20px auto;
+    width:90%;
+    display: grid;
+    grid-template-rows: repeat(3,50px);
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+.a-menubox div{
+    background-color:#ffffff;
+    text-align:center;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 7px 1px 1px;
+    line-height:40px;
+    box-shadow: 0px 5px #bcbdd0;
+}
+
+
+
+/*w.Webパンフレット*/
+.w-container{
+    margin:30px 0px;
+}
+.w-pamphlet{
+    text-align:center;
+}
+#pamphlet-a{
+    display: block;
+    width:180px;
+    margin:15px auto 5px;
+}
+#underline{
+    text-decoration:underline !important;
+}
+#pamphlet-img{
+    display:block;
+    width:180px;
+}
+#pamphlet-title{
+    font-size:small;
+}
+
+.w-links{
+    display:grid;
+    grid-template-rows: 50px;
+    grid-template-columns:300px 300px;
+    margin:40px auto 20px;
+    gap:40px;
+    width:640px
+}
+
+.w-button{
+    border-radius: 10px;
+    line-height:50px;
+    text-align:center;
+    font-weight: bold;
+    font-size:small;
+}
+
+#w-HP{
+    border:1px #38306d solid;
+    color:#38306d;
+    position:relative;
+}
+#w-navi{
+    border:1px #915e05 solid;
+    color:#915e05;
+    position:relative;
+}
+.w-arrow{
+    position:absolute;
+    right:30px;
+    font-size:large;
+    font-weight:bolder;
+}
+
+/*n.ナビゲーター*/
+.n-container{
+    background-color:#25276d;
+    border-radius: 10px;
+    position: fixed;
+    right:50px;
+    bottom:100px;
+    width:50px;
+    height:50px;
+    color:white;
+    font-size:30px;
+    font-weight: bold;
+    line-height:50px;
+    text-align:center;
+    box-shadow: 0px 2px #4d4d4d;
+}
+
+/*f.フッター*/
+#footer{
+    border-top:1px gray solid;
+}
+.f-container{
+    display:grid;
+    grid-template-rows: 25px;
+    grid-template-columns:50% 50%;
+    gap:1px;
+    background-color: gray;
+    margin:15px 0px;
+}
+.f-container div{
+    background-color: #ffffff;
+}
+
+.left{
+    text-align:right;
+    padding-right:10px;
+}
+.right{
+    text-align:left;
+    padding-left:10px;
+}
+.right a{
+    color:#0064ff;
+}
+
+/*共通*/
+.title{
+    text-align:center;
+    font-size:23px;
+    margin:0;
+    display:inline-block;
+}
+.titlebox{
+    margin: auto;
+    width: fit-content;
+}
+.icon{
+    margin-right:0.5em;
+}
+
+#main{
+    height:fit-content;
+}
+
+.hover:hover{
+    opacity: 70%;
+    cursor:pointer;
+}
+
+a{
+    text-decoration-line:none;
+}
+
+
+/*レスポンシブ対応(タブレット)*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+.a-menubox{
+    grid-template-rows: repeat(4,50px);
+    grid-template-columns:repeat(3,1fr);
+}
+.w-links{
+    display:grid;
+    grid-template-rows: 50px 50px;
+    grid-template-columns:300px;
+    width:300px;
+    margin:20px auto;
+}
+}
+
+/*レスポンシブ対応(スマホ)*/
+@media screen and (max-width: 768px) {
+#h-logo{
+    display:block;
+    margin:5px auto;
+    height:50px;
+}
+#h-hamburger{
+    display:block;
+}
+.h-menucontainer{
+    width:100%;
+    margin:auto;
+}
+.h-menubox{
+    display:none;
+    position:absolute;
+    top:0;
+    right:0;
+    width:80%;
+    z-index:100;
+}
+.h-menu{
+    grid-template-rows: repeat(8,100px) 100px;
+    grid-template-columns:100%;
+    /*grid-template-columns: calc(25% - 1.5px) calc(25% - 1.5px) calc(25% - 1.5px) calc(25% - 1.5px);*/
+    gap: 1px;
+    line-height:100px;
+    font-size:20px;
+}
+.slick-arrow{
+    width:30px;
+}
+.slick-prev{
+    left:0;
+    right:auto;
+}
+.slick-next{
+    right:0;
+    left:auto;
+}
+.a-menubox{
+    grid-template-rows: repeat(4,50px);
+    grid-template-columns:repeat(2,1fr);
+}
+.w-links{
+    display:grid;
+    grid-template-rows: 50px 50px;
+    grid-template-columns:300px;
+    width:300px;
+    margin:20px auto;
+}
+}
+/*githubの使い方マスターしました!!!*/
